@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+   
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+  <ion-content [fullscreen]="true">
+    <swiper-container [slidesPerView]="2">
+      <swiper-slide *ngFor="let producto of ArregloProducto">
+        
+        <ion-card [routerLink]="['/detalles-productos', producto.id]">
+          <ion-card-header>
+            <ion-avatar>
+              <img [src]="producto.image">
+            </ion-avatar>
+            <ion-card-title>{{producto.title}}</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </swiper-slide>
+     
+    </swiper-container>
+   
+  </ion-content>
+ 

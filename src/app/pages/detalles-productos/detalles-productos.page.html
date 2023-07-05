@@ -1,0 +1,38 @@
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Detalles productos </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col sizeMd="4" offsetMd="4">
+        <!-- Desde aca empieza a mostrar los datos de cada pj -->
+        <div *ngIf="Producto">
+          <ion-card>
+            <ion-card-content class="ion-text-center">
+              <!-- muestra la imagen del producto -->
+              <img src="{{Producto.image}}" alt="">
+              <!-- muestra el titulo del producto -->
+              <ion-card-title>
+                {{Producto.title}}
+              </ion-card-title>
+              <!-- muestra la descripcion del producto -->
+              <p>Descripcion: {{Producto.description}}</p>
+              <!-- Muestra el precio del producto -->
+              <div>
+              <ion-item lines="none">
+                
+                <ion-label>Precio: <strong>{{Producto.price}}</strong></ion-label>
+
+              </ion-item>
+            </div>
+      
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
